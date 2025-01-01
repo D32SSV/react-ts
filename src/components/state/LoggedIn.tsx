@@ -12,7 +12,7 @@ const LoggedIn = () => {
     <div>
       <button onClick={handleLogin}>{isLogged ? "Log Out" : "Log In"}</button>
       <p>User is {!isLogged ? "Not Logged In" : "Logged In"}</p>
-      <User isLogged={isLogged} name="KRSNA" email="krsna@kalamkaar.com" />
+      <User />
     </div>
   );
 };

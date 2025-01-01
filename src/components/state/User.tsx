@@ -1,33 +1,17 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 type Auth = {
   name: string;
   email: string;
-  isLogged: boolean;
 };
 
-const User = ({
-  isLogged,
-  name = "Guest",
-  email = "krsna@kalamkaar.com",
-}: Auth) => {
-  const [user, setUser] = useState<Auth | null>(null);
+const User = () => {
+  const [user, setUser] = useState<Auth>({} as Auth);
 
-  useEffect(() => {
-    if (isLogged) {
-      setUser({ name, email, isLogged: true });
-    } else {
-      setUser(null);
-    }
-  }, [isLogged, name, email]);
-
+  useEffect(() => setUser({ name: "KRSNA", email: "RAM" }), []);
   return (
     <>
-      {isLogged ? (
-        <p>Username is: {user?.name}</p>
-      ) : (
-        <p>User is not logged in</p>
-      )}
+      <p>Username is: {user.name}</p>
     </>
   );
 };
