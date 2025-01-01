@@ -8,6 +8,7 @@ import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import Status from "./components/Status";
+import LoggedIn from "./components/state/LoggedIn";
 
 function App() {
   const personName = {
@@ -56,6 +57,9 @@ function App() {
           return setValue(event.target.value);
         }}
       />
+      <div>
+        <LoggedIn />
+      </div>
     </>
   );
 }
