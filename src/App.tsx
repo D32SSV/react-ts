@@ -1,6 +1,8 @@
 import "./App.css";
+import Button from "./components/Button";
 import Greet from "./components/Greet";
 import Heading from "./components/Heading";
+import Input from "./components/Input";
 import Oscar from "./components/Oscar";
 import Person from "./components/Person";
 import PersonList from "./components/PersonList";
@@ -39,6 +41,8 @@ function App() {
         name={"Bhai Ji, This is optional prop type, no msgCount"}
         auth={true}
       />
+      <Button handleClick={(event) => console.log("Jai Shri Ram", event)} />
+      <Input value="" handleChange={(event) => console.log(event)} />
     </>
   );
 }
