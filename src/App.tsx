@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import Button from "./components/Button";
 import Greet from "./components/Greet";
@@ -27,22 +28,34 @@ function App() {
       lastName: "Ji",
     },
   ];
+
+  const [value, setValue] = useState("");
   return (
     <>
       <Greet name={"Bhai"} msgCount={10} auth={true} />
       <Person name={personName} />
       <PersonList name={list} />
       <Status status="success" />
-      <Heading>This is children type prop</Heading>
+      <Heading style={{ padding: "1rem", color: "crimson" }}>
+        This is children type prop
+      </Heading>
       <Oscar>
-        <Heading>This is ReactNode children prop type</Heading>
+        <Heading style={{ color: "cornsilk" }}>
+          This is ReactNode children prop type
+        </Heading>
       </Oscar>
       <Greet
         name={"Bhai Ji, This is optional prop type, no msgCount"}
         auth={true}
       />
       <Button handleClick={(event) => console.log("Jai Shri Ram", event)} />
-      <Input value="" handleChange={(event) => console.log(event)} />
+      <Input
+        value={value}
+        handleChange={(event) => {
+          console.log(event.target.value);
+          return setValue(event.target.value);
+        }}
+      />
     </>
   );
 }
