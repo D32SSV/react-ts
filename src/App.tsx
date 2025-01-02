@@ -1,37 +1,30 @@
-import { useState } from "react";
+// import { useState } from "react";
 import "./App.css";
-import Button from "./components/Button";
-import Greet from "./components/Greet";
-import Heading from "./components/Heading";
-import Input from "./components/Input";
-import Oscar from "./components/Oscar";
-import Person from "./components/Person";
-import PersonList from "./components/PersonList";
-import Status from "./components/Status";
 import LoggedIn from "./components/state/LoggedIn";
 import Counter from "./components/state/Counter";
 
 function App() {
-  const personName = {
-    firstName: "Bruce",
-    lastName: "Banner",
-  };
-  const list = [
-    {
-      firstName: "Tony",
-      lastName: "Stark",
-    },
-    {
-      firstName: "Steve",
-      lastName: "Rogers",
-    },
-    {
-      firstName: "Prabhu",
-      lastName: "Ji",
-    },
-  ];
+  
+  // const personName = {
+  //   firstName: "Bruce",
+  //   lastName: "Banner",
+  // };
+  // const list = [
+  //   {
+  //     firstName: "Tony",
+  //     lastName: "Stark",
+  //   },
+  //   {
+  //     firstName: "Steve",
+  //     lastName: "Rogers",
+  //   },
+  //   {
+  //     firstName: "Prabhu",
+  //     lastName: "Ji",
+  //   },
+  // ];
 
-  const [value, setValue] = useState("");
+  // const [value, setValue] = useState("");
   return (
     <>
       {/* <>
