@@ -2,9 +2,10 @@
 import "./App.css";
 import LoggedIn from "./components/state/LoggedIn";
 import Counter from "./components/state/Counter";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
+import Box from "./components/context/Box";
 
 function App() {
-  
   // const personName = {
   //   firstName: "Bruce",
   //   lastName: "Banner",
@@ -56,6 +57,9 @@ function App() {
       <div>
         <LoggedIn />
         <Counter />
+        <ThemeContextProvider>
+          <Box />
+        </ThemeContextProvider>
       </div>
     </>
   );
