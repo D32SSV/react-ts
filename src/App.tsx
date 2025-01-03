@@ -9,6 +9,7 @@ import User from "./components/context/User";
 import MutableRef from "./components/ref/MutableRef";
 import { Private } from "./components/auth/Private";
 import Profile from "./components/auth/Profile";
+import List from "./components/generics/List";
 
 function App() {
   // const personName = {
@@ -68,8 +69,12 @@ function App() {
         <UserContextProvider>
           <User />
         </UserContextProvider> */}
-        <MutableRef />
+        {/* <MutableRef /> */}
         <Private isLoggedIn={true} component={Profile} />
+        <List
+          items={["Batman", "Superman", "IronMan", "Hanuman"]}
+          onClick={(name) => console.log(name)}
+        />
       </div>
     </>
   );
