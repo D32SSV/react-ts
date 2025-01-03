@@ -7,6 +7,8 @@ import Box from "./components/context/Box";
 import { UserContextProvider } from "./components/context/UserContext";
 import User from "./components/context/User";
 import MutableRef from "./components/ref/MutableRef";
+import { Private } from "./components/auth/Private";
+import Profile from "./components/auth/Profile";
 
 function App() {
   // const personName = {
@@ -67,6 +69,7 @@ function App() {
           <User />
         </UserContextProvider> */}
         <MutableRef />
+        <Private isLoggedIn={true} component={Profile} />
       </div>
     </>
   );
