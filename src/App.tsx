@@ -6,6 +6,7 @@ import { ThemeContextProvider } from "./components/context/ThemeContext";
 import Box from "./components/context/Box";
 import { UserContextProvider } from "./components/context/UserContext";
 import User from "./components/context/User";
+import MutableRef from "./components/ref/MutableRef";
 
 function App() {
   // const personName = {
@@ -57,14 +58,15 @@ function App() {
         />
       </> */}
       <div>
-        <LoggedIn />
+        {/* <LoggedIn />
         <Counter />
         <ThemeContextProvider>
           <Box />
         </ThemeContextProvider>
         <UserContextProvider>
           <User />
-        </UserContextProvider>
+        </UserContextProvider> */}
+        <MutableRef />
       </div>
     </>
   );
