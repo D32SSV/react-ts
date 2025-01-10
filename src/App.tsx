@@ -14,6 +14,7 @@ import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateLiterals/Toast";
 import CustomButton from "./components/html/Button";
 import PropExport from "./components/html/PropExport";
+import Text from "./components/Polymorphic/Text";
 
 function App() {
   // const personName = {
@@ -85,6 +86,16 @@ function App() {
           Primary Button
         </CustomButton>
         <PropExport msgCount={10} name="Shiv" auth={true} />
+        <Text as="h1" size="lg" color="primary">
+          Heading
+        </Text>
+        <Text as="p" size="md" color="primary">
+          Paragraph
+        </Text>
+        <Text as="label" size="sm" color="secondary">
+          Label
+        </Text>
+        <Text as="input" size="sm" color="secondary"/>
       </div>
     </>
   );
