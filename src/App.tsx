@@ -12,6 +12,7 @@ import Profile from "./components/auth/Profile";
 import List from "./components/generics/List";
 import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateLiterals/Toast";
+import CustomButton from "./components/html/Button";
 
 function App() {
   // const personName = {
@@ -72,13 +73,16 @@ function App() {
           <User />
         </UserContextProvider> */}
         {/* <MutableRef /> */}
-        <Private isLoggedIn={true} component={Profile} />
+        {/* <Private isLoggedIn={true} component={Profile} />
         <List
           items={["Batman", "Superman", "IronMan", "Hanuman"]}
           onClick={(name) => console.log(name)}
         />
         <RandomNumber value={10} isPositive />
-        <Toast position="left-center" />
+        <Toast position="left-center" /> */}
+        <CustomButton variant="primary" onClick={() => console.log("Clicked")}>
+          Primary Button
+        </CustomButton>
       </div>
     </>
   );
