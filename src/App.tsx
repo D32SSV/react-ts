@@ -13,6 +13,7 @@ import List from "./components/generics/List";
 import RandomNumber from "./components/restriction/RandomNumber";
 import Toast from "./components/templateLiterals/Toast";
 import CustomButton from "./components/html/Button";
+import PropExport from "./components/html/PropExport";
 
 function App() {
   // const personName = {
@@ -83,6 +84,7 @@ function App() {
         <CustomButton variant="primary" onClick={() => console.log("Clicked")}>
           Primary Button
         </CustomButton>
+        <PropExport msgCount={10} name="Shiv" auth={true} />
       </div>
     </>
   );
